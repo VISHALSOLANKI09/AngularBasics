@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-xs-12">
+        <!-- #f="ngForm" is the local reference to the form so that we can get access to the form in our typescript code. -->
+        <!-- mtlb f form ko refer kr rha hai aur #f bta rha hai ki ngForm directive ka use kro -->
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="courseName">Course Name</label>
+                    <input type="text" id="courseName" class="form-control" name="courseName" ngModel>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label for="courseDesc">Course Description</label>
+                    <input type="text" id="courseDesc" class="form-control" name="courseDesc" ngModel>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="courseAmount">Course Amount</label>
+                    <input type="text" id="courseAmount" class="form-control" name="courseAmount" ngModel>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button style="margin-left: 7px; margin-top: 3px" class="btn btn-success" type="submit">Add</button>
+                    <button style="margin-left: 7px; margin-top: 3px" class="btn btn-danger" type="button">Delete</button>
+                    <button style="margin-left: 7px; margin-top: 3px" class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

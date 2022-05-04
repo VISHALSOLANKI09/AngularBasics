@@ -1,0 +1,14 @@
+<form (ngSubmit)="createUser()" autocomplete="off">
+    <h3>Make an account to gain full access</h3>
+    <h4>{{ "VishalSolanki is " | awesomeify }}</h4>
+    <div>
+        <label>Email</label>
+        <input type="email" name="EMAIL" [(ngModel)]="userData.email">
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" name="PASSWORD" [(ngModel)]="userData.password">
+    </div>
+    <input type="submit" value="Register">
+    <h2>{{ "129.872967908278" | currency: 'INR' }}</h2>
+</form>
